@@ -1,15 +1,19 @@
-import React from 'react';
+import React, {ReactElement} from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
-import {ProductDetail, ProductList} from "./pages";
+import {Home, ProductDetail, ProductList} from "./pages";
+import PublicLayout from "./layouts/Public/PublicLayout";
 
-const Router = () => {
+const Router = (): ReactElement => {
     return (
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/items" element={<ProductList/>}/>
-                    <Route path="/items/:id" element={<ProductDetail/>}/>
+                    <Route path="/" element={<PublicLayout/>}>
+                        <Route path="" element={<Home/>}/>
+                        <Route path="items" element={<ProductList/>}/>
+                        <Route path="items/:id" element={<ProductDetail/>}/>
+                    </Route>
                 </Routes>
             </BrowserRouter>
         </>

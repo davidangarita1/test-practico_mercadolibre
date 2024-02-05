@@ -9,7 +9,7 @@ describe('<ProductDetail />', () => {
     test('Render successfully', () => {
         setup();
 
-        const linkElement = screen.getByText(/Product detail/i);
+        const linkElement = screen.getByText(/Item detail/i);
 
         expect(linkElement).toBeInTheDocument();
     });

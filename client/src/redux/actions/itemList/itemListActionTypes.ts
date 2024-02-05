@@ -1,0 +1,3 @@
+export const LOADING_ITEM_LIST: string = "LOADING_ITEM_LIST";
+export const LOAD_SUCCESS_ITEM_LIST: string = "LOAD_SUCCESS_ITEM_LIST";
+export const LOAD_FAILURE_ITEM_LIST: string = "LOAD_FAILURE_ITEMS";
