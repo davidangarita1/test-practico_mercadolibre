@@ -1,0 +1,30 @@
+@import "../../assets/sass/colors";
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+  background-color: map-get($themes, "yellow");
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 75%;
+
+    .logo {
+      display: grid;
+      place-content: center;
+      height: 100%;
+      a {
+        display: flex;
+        align-items: center;
+        img {
+          height: 40px;
+        }
+      }
+    }
+  }
+}

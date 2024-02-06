@@ -1,15 +1,16 @@
 import axios, {AxiosResponse} from 'axios';
-import {Dispatch} from "react";
+
 import {loadErrorItemList, loadingItemList, loadSuccessItemList} from "../redux/actions";
 
 import {API_URL} from "../utils/connection";
+import {Dispatch} from "react";
 
 export const getItemList = (search: string) => (dispatch: Dispatch<any>): void => {
     dispatch(loadingItemList())
 
     const payload = {
         method: 'GET',
-        url: `${API_URL}/items=search=${search}`,
+        url: `${API_URL}/search?q=${search}`,
         headers: { 'Content-Type': 'application/json' }
     }
 

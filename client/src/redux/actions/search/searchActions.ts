@@ -1,12 +1,12 @@
 import {
-    SEARCH_ITEMS,
+    SET_SEARCH,
     CLEAR_SEARCH,
 } from './actionTypesSearch'
 import {Action} from "../../../types";
 
-export const searchItems = (search: string): Action => {
+export const setSearch = (search: string): Action => {
     return {
-        type: SEARCH_ITEMS,
+        type: SET_SEARCH,
         payload: search
     }
 }

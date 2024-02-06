@@ -1,19 +1,19 @@
 import {
     CLEAR_SEARCH,
-    SEARCH_ITEMS
+    SET_SEARCH
 } from "../actions/search/actionTypesSearch";
 import {Action} from "../../types";
 
 const initialState = {
-    search: "",
+    text: "",
 }
 
 export const searchReducer = (state = initialState, {type, payload}: Action) => {
     switch (type) {
-        case SEARCH_ITEMS: {
+        case SET_SEARCH: {
             return {
                 ...state,
-                search: payload
+                text: payload
             };
         }
         case CLEAR_SEARCH: {
