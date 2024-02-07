@@ -1,0 +1,28 @@
+@import '../../../assets/sass/colors';
+
+.ItemList {
+  margin: 0 auto;
+  max-width: 75%;
+  height: 100vh;
+  .categories {
+    margin: 10px 0;
+    span {
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+    .normal {
+      color: map-get($themes, 'gray');
+    }
+    .dark {
+      color: map-get($themes, 'dark-gray');
+      font-weight: 600;
+    }
+    svg {
+      margin: 0 5px;
+    }
+  }
+  .items {
+    border-radius: 4px;
+    background-color: map-get($themes, 'white');
+  }
+}

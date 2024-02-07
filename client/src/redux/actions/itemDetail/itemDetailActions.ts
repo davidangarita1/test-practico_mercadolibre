@@ -1,4 +1,4 @@
-import {Action, Item} from "../../../types";
+import {Action, ItemDetail} from "../../../types";
 import {AxiosError} from "axios";
 import {LOAD_FAILURE_ITEM_DETAIL, LOAD_SUCCESS_ITEM_DETAIL, LOADING_ITEM_DETAIL} from "./itemDetailActionTypes";
 
@@ -8,7 +8,7 @@ export const loadingItemDetail = (): Action => {
     }
 }
 
-export const loadSuccessItemDetail = (item: Item): Action => {
+export const loadSuccessItemDetail = (item: ItemDetail): Action => {
     return {
         type: LOAD_SUCCESS_ITEM_DETAIL,
         payload: {

@@ -1,25 +1,11 @@
-// @ts-nocheck
 import './SearchBar.scss'
 import React, {ReactElement} from 'react';
-import {useNavigate} from 'react-router-dom';
-import {useDispatch, useSelector} from "react-redux";
+import useSearchBar from "../hook/useSearchBar";
 
-import {setSearch} from "../../redux/actions/search/searchActions";
-
-import btnsearch from "../../assets/img/search.png"
+import btnsearch from "../../../assets/img/search.png"
 
 export const SearchBar = (): ReactElement => {
-    const navigate = useNavigate()
-    const dispatch = useDispatch();
-    const {text} = useSelector((state) => state.search);
-
-    const redirect = (): void => navigate(`/items?search=${text}`);
-
-    const handleSubmit = (): void => text !== '' && redirect();
-
-    const handleKeyPress = (key: string): void => key === 'Enter' && text !== '' && redirect();
-
-    const handleChange = (value: string): void => dispatch(setSearch(value));
+    const {handleSubmit, handleKeyPress, handleChange, text} = useSearchBar()
 
     return (
         <div className={"SearchBar"}>

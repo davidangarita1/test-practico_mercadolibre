@@ -1,3 +1,3 @@
-export * from './Home/Home'
-export * from './ProductDetail/ProductDetail'
-export * from './ProductList/ProductList'
+export * from './Home/HomePage'
+export * from './ItemDetail/ItemDetail'
+export * from './ItemList/component/ItemList'

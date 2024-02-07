@@ -5,7 +5,7 @@ import {
 import {Action} from "../../types";
 
 const initialState = {
-    text: "",
+    searchText: "",
 }
 
 export const searchReducer = (state = initialState, {type, payload}: Action) => {
@@ -13,13 +13,13 @@ export const searchReducer = (state = initialState, {type, payload}: Action) => 
         case SET_SEARCH: {
             return {
                 ...state,
-                text: payload
+                searchText: payload
             };
         }
         case CLEAR_SEARCH: {
             return {
                 ...state,
-                search: ""
+                searchText: ""
             };
         }
         default:

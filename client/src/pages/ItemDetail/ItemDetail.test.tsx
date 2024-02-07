@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { ProductDetail } from './ProductDetail';
+import { ItemDetail } from './ItemDetail';
 
 
-describe('<ProductDetail />', () => {
-    const setup = () => render(<ProductDetail />);
+describe('<ItemDetail />', () => {
+    const setup = () => render(<ItemDetail />);
 
     test('Render successfully', () => {
         setup();

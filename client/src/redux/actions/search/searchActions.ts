@@ -2,16 +2,16 @@ import {
     SET_SEARCH,
     CLEAR_SEARCH,
 } from './actionTypesSearch'
-import {Action} from "../../../types";
+import {UnknownAction} from "redux";
 
-export const setSearch = (search: string): Action => {
+export const setSearch = (searchText: string): UnknownAction => {
     return {
         type: SET_SEARCH,
-        payload: search
+        payload: searchText
     }
 }
 
-export const clearSearch = (): Action => {
+export const clearSearch = (): UnknownAction => {
     return {type: CLEAR_SEARCH}
 }
 

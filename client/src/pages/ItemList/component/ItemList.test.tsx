@@ -1,10 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import {ProductList} from './ProductList';
+import {ItemList} from './ItemList';
 
-
-describe('<ProductList />', () => {
-    const setup = () => render(<ProductList />);
+describe('<ItemList />', () => {
+    const setup = () => render(<ItemList />);
 
     test('Render successfully', () => {
         setup();

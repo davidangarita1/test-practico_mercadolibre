@@ -1,17 +1,25 @@
-import {Action} from "../../types";
+import {ItemList} from "../../types";
 import {
+    CLEAN_ITEM_LIST,
     LOAD_FAILURE_ITEM_LIST,
-    LOAD_SUCCESS_ITEM_LIST,
+    SET_ITEM_LIST,
     LOADING_ITEM_LIST
 } from "../actions/itemList/itemListActionTypes";
 
 const initialState = {
-    items: [],
+    itemList: {
+        author: {
+            name: "",
+            lastname: ""
+        },
+        categories: [],
+        items: []
+    },
     isLoading: false,
     error: null
 }
 
-export const itemListReducer = (state = initialState, {type, payload}: Action) => {
+export const itemListReducer = (state = initialState, {type, payload}: { type: string, payload: ItemList }) => {
     switch (type) {
         case LOADING_ITEM_LIST: {
             return {
@@ -19,10 +27,10 @@ export const itemListReducer = (state = initialState, {type, payload}: Action) =
                 isLoading: true
             };
         }
-        case LOAD_SUCCESS_ITEM_LIST: {
+        case SET_ITEM_LIST: {
             return {
                 ...state,
-                item: payload,
+                itemList: payload,
                 isLoading: false
             };
         }
@@ -31,6 +39,13 @@ export const itemListReducer = (state = initialState, {type, payload}: Action) =
                 ...state,
                 isLoading: false,
                 error: payload
+            }
+        }
+        case CLEAN_ITEM_LIST: {
+            return {
+                ...state,
+                isLoading: true,
+                itemList: payload,
             }
         }
         default:

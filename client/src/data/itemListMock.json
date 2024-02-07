@@ -1,28 +1,68 @@
-[
-  {
-    "author": {
-      "name": "David",
-      "lastname": "Angarita"
+{
+  "author": {
+    "name": "David",
+    "lastname": "Angarita"
+  },
+  "categories": [
+    "Celulares y Teléfonos",
+    "Celulares y Smartphones"
+  ],
+  "items": [
+    {
+      "id": "MLA1158559776",
+      "title": "Xiaomi Redmi Note 11 4gb Ram 128gb Rom Color Gris Grafito",
+      "price": {
+        "currency": "ARS",
+        "amount": 339999,
+        "decimals": 339999
+      },
+      "picture": "http://http2.mlstatic.com/D_744890-MLU72340463933_102023-I.jpg",
+      "condition": "Nuevo",
+      "free_shipping": true,
+      "sold_quantity": 8281,
+      "description": "Excelente product"
     },
-    "categories": [
-      "Celulares y Teléfonos",
-      "Celulares y Smartphones"
-    ],
-    "items": [
-      {
-        "id": "MLA1158559776",
-        "title": "Xiaomi Redmi Note 11 4gb Ram 128gb Rom Color Gris Grafito",
-        "price": {
-          "currency": "ARS",
-          "amount": 339999,
-          "decimals": 339999
-        },
-        "picture": "http://http2.mlstatic.com/D_744890-MLU72340463933_102023-I.jpg",
-        "condition": "Nuevo",
-        "free_shipping": true,
-        "sold_quantity": 8281,
-        "description": "Excelente product"
-      }
-    ]
-  }
-]
+    {
+      "id": "MLA1376996579",
+      "title": "Xiaomi Redmi 10c Dual Sim 128gb 4gb Ram Ocean Blue",
+      "price": {
+        "currency": "ARS",
+        "amount": 249999,
+        "decimals": 249999
+      },
+      "picture": "http://http2.mlstatic.com/D_744890-MLU72340463933_102023-I.jpg",
+      "condition": "Nuevo",
+      "free_shipping": false,
+      "sold_quantity": 8281,
+      "description": "Excelente product"
+    },
+    {
+      "id": "MLA1376996571",
+      "title": "Xiaomi Redmi 10c Dual Sim 128gb 4gb Ram Ocean Blue",
+      "price": {
+        "currency": "ARS",
+        "amount": 249999,
+        "decimals": 249999
+      },
+      "picture": "http://http2.mlstatic.com/D_744890-MLU72340463933_102023-I.jpg",
+      "condition": "Nuevo",
+      "free_shipping": false,
+      "sold_quantity": 8281,
+      "description": "Excelente product"
+    },
+    {
+      "id": "MLA1376996572",
+      "title": "Xiaomi Redmi 10c Dual Sim 128gb 4gb Ram Ocean Blue",
+      "price": {
+        "currency": "ARS",
+        "amount": 249999,
+        "decimals": 249999
+      },
+      "picture": "http://http2.mlstatic.com/D_744890-MLU72340463933_102023-I.jpg",
+      "condition": "Nuevo",
+      "free_shipping": true,
+      "sold_quantity": 8281,
+      "description": "Excelente product"
+    }
+  ]
+}

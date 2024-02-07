@@ -3,9 +3,9 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 import logo from '../../assets/img/logo.png'
-import {SearchBar} from "../SearchBar/SearchBar";
+import {SearchBar} from "../SearchBar/component/SearchBar";
 
-const Header = () => {
+export const Header = () => {
     return (
         <>
             <header>
@@ -13,7 +13,7 @@ const Header = () => {
                     <div className={"container"}>
                         <div className={"logo"}>
                             <Link to="/">
-                                <img src={logo} alt={"Logo empresarial mercado libre"}/>
+                                <img src={logo} alt={"Logo empresarial"}/>
                             </Link>
                         </div>
                         <SearchBar/>
@@ -23,5 +23,3 @@ const Header = () => {
         </>
     );
 };
-
-export default Header;
