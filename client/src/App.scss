@@ -1,0 +1,6 @@
+@import './assets/sass/colors';
+
+#root {
+  background-color: map-get($themes, 'light-gray');
+  font-family: sans-serif;
+}
