@@ -1,6 +1,5 @@
 import {combineReducers} from 'redux';
 import {itemDetailReducer, searchReducer, itemListReducer} from "../reducers";
-import {} from "../reducers/itemListReducer";
 
 const rootReducer = () => {
     return combineReducers({

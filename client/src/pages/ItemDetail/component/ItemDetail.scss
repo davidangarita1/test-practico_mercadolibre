@@ -1,11 +1,11 @@
 @import '../../../assets/sass/colors';
 
-.ItemList {
+.ItemDetail{
   margin: 0 auto;
   max-width: 75%;
   height: 100vh;
 
-  .items {
+  .item {
     border-radius: 4px;
     background-color: map-get($themes, 'white');
   }

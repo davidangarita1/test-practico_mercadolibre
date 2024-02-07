@@ -8,12 +8,10 @@ export const loadingItemDetail = (): Action => {
     }
 }
 
-export const loadSuccessItemDetail = (item: ItemDetail): Action => {
+export const loadSuccessItemDetail = (itemDetail: ItemDetail): Action => {
     return {
         type: LOAD_SUCCESS_ITEM_DETAIL,
-        payload: {
-            item
-        }
+        payload: itemDetail
     }
 }
 

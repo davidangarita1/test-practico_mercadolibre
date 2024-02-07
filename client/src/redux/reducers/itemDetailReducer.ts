@@ -6,7 +6,7 @@ import {
 import {Action} from "../../types";
 
 const initialState = {
-    item: null,
+    itemDetail: {},
     isLoading: false,
     error: null
 }
@@ -22,7 +22,7 @@ export const itemDetailReducer = (state = initialState, {type, payload}: Action)
         case LOAD_SUCCESS_ITEM_DETAIL: {
             return {
                 ...state,
-                item: payload,
+                itemDetail: payload,
                 isLoading: false
             };
         }

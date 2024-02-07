@@ -2,11 +2,11 @@ import './ItemList.scss'
 import {ReactElement} from 'react';
 import {Item} from "../../../types";
 
-import useProductList from "../hook/useProductList";
+import useItemList from "../hook/useItemList";
 import {CategoryList, ItemCard} from "../../../components";
 
 export const ItemList = (): ReactElement => {
-    const {itemList, isLoading, error} = useProductList();
+    const {itemList, isLoading, error} = useItemList();
 
     return (
         <>

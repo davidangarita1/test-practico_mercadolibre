@@ -1,0 +1,19 @@
+@import '../../assets/sass/colors';
+
+.Categories {
+  margin: 10px 0;
+  span {
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+  .normal {
+    color: map-get($themes, 'gray');
+  }
+  .dark {
+    color: map-get($themes, 'dark-gray');
+    font-weight: 600;
+  }
+  svg {
+    margin: 0 5px;
+  }
+}
