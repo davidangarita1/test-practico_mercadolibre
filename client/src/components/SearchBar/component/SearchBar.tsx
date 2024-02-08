@@ -3,12 +3,14 @@ import React, {ReactElement} from 'react';
 import useSearchBar from "../hook/useSearchBar";
 
 import btnsearch from "../../../assets/img/search.png"
+import {SEO} from "../../SEO/SEO";
 
 export const SearchBar = (): ReactElement => {
-    const {handleSubmit, handleKeyPress, handleChange, text} = useSearchBar()
+    const {handleSubmit, handleKeyPress, handleChange, text, seoSearch} = useSearchBar()
 
     return (
         <div className={"SearchBar"}>
+            <SEO title={seoSearch.title} description={seoSearch.description} />
             <div className="search">
                 <input
                     type="text"

@@ -4,3 +4,4 @@ export * from './Currency/Currency'
 export * from './SearchBar/component/SearchBar';
 export * from './ItemCard/component/ItemCard';
 export * from './Header/Header';
+export * from './SEO/SEO'

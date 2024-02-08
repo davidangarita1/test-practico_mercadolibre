@@ -1,13 +1,18 @@
 import './ItemDetail.scss'
 import React, {ReactElement} from 'react';
 import useItemDetail from "../hook/useItemDetail";
-import {CategoryList, Currency} from "../../../components";
+import {CategoryList, Currency, SEO} from "../../../components";
 
 export const ItemDetail = (): ReactElement => {
     const {itemList, itemDetail} = useItemDetail();
 
     return (
         <div className={"ItemDetail"}>
+            <SEO
+                title={itemDetail?.item.title}
+                description={itemDetail?.item.description}
+                url={window.location.pathname}
+                item={itemDetail?.item} />
             {Array.isArray(itemList.categories) && <CategoryList categories={itemList.categories}/>}
             {itemDetail && (
                 <div className={"item"}>

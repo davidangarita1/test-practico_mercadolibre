@@ -9,6 +9,11 @@ const useSearchBar = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
+    const seoSearch = {
+        title: "Mercado Libre",
+        description: "Nunca pares de buscar"
+    }
+
     const redirect = (): void => {
         dispatch(setSearch(text));
         dispatch(cleanItemList());
@@ -32,7 +37,8 @@ const useSearchBar = () => {
         handleSubmit,
         handleKeyPress,
         handleChange,
-        text
+        text,
+        seoSearch
     }
 }
 

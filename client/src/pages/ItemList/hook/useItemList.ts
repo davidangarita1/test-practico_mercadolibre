@@ -26,7 +26,8 @@ const useItemList = () => {
     return {
         itemList,
         isLoading,
-        error
+        error,
+        lastSearch
     }
 };
 
