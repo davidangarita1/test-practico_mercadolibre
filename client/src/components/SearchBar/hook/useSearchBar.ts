@@ -5,7 +5,7 @@ import {useState} from "react";
 import {cleanItemList} from "../../../redux/actions";
 
 const useSearchBar = () => {
-    const [text, setText] = useState("")
+    const [text, setText] = useState<string>("")
     const navigate = useNavigate();
     const dispatch = useDispatch();
 

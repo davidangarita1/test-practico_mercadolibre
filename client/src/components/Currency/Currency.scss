@@ -1,0 +1,14 @@
+.Currency {
+  display: flex;
+  font-weight: 500;
+  margin-bottom: 30px;
+
+  .number {
+    font-size: 2.2rem;
+  }
+  .float {
+    padding-top: 3px;
+    margin-left: 3px;
+    font-size: 1.1rem;
+  }
+}

@@ -6,7 +6,7 @@ import {
 import {Action} from "../../types";
 
 const initialState = {
-    itemDetail: {},
+    itemDetail: null,
     isLoading: false,
     error: null
 }

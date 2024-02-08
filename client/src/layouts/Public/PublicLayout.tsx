@@ -1,9 +1,9 @@
 import './PublicLayout.scss'
-import React from 'react';
+import React, {ReactElement} from 'react';
 import {Outlet} from "react-router-dom";
 import {Header} from "../../components";
 
-const PublicLayout = () => {
+const PublicLayout = (): ReactElement => {
     return (
         <>
             <Header />

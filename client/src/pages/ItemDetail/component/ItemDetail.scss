@@ -1,12 +1,73 @@
 @import '../../../assets/sass/colors';
 
-.ItemDetail{
+@mixin small-text {
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+
+.ItemDetail {
   margin: 0 auto;
-  max-width: 75%;
+  max-width: 1000px;
   height: 100vh;
 
   .item {
-    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "picture details"
+    "description .";
+    border-radius: 5px;
     background-color: map-get($themes, 'white');
+
+    .picture {
+      display: grid;
+      grid-area: picture;
+      margin: 0;
+      padding: 30px;
+      place-content: center;
+    }
+
+    .details {
+      display: grid;
+      grid-auto-rows: fit-content(100%);
+      grid-area: details;
+      padding: 30px;
+      color: map-get($themes, 'black');
+
+      .condition {
+        @include small-text;
+        margin-bottom: 10px;
+      }
+      .title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .btnBuy {
+        width: 100%;
+        height: 35px;
+        color: map-get($themes, 'white');;
+        background-color: map-get($themes, 'blue');
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+    }
+
+    .description {
+      grid-area: description;
+      padding: 30px;
+      min-height: 100px;
+      span {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: map-get($themes, 'black');
+      }
+      p {
+        @include small-text;
+        color: map-get($themes, 'gray');
+      }
+    }
   }
 }
