@@ -1,20 +1,17 @@
 import './ItemCard.scss'
-import React from 'react';
-import car from '../../assets/img/car.png'
-import {formatCurrency} from "../../utils/helpers";
-import {Item} from "../../types";
-import {useNavigate} from "react-router-dom";
-import {useDispatch} from "react-redux";
-import {clearSearch} from "../../redux/actions/search/searchActions";
+import React, {ReactElement} from 'react';
+import car from '../../../assets/img/car.png'
 
-export const ItemCard = ({item}: { item: Item }) => {
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
+import {Item} from "../../../types";
+import useItemCard from "../hook/useItemCard";
+import {formatCurrency} from "../../../utils/helpers";
 
-    const handleClick = () => {
-        dispatch(clearSearch())
-        navigate(`/items/${item.id}`);
-    }
+interface ItemCardProps {
+    item: Item
+}
+
+export const ItemCard = ({item}: ItemCardProps): ReactElement => {
+    const {handleClick} = useItemCard(item);
 
     return (
         <div onClick={handleClick} className={"ItemCard"}>
@@ -23,7 +20,7 @@ export const ItemCard = ({item}: { item: Item }) => {
             </figure>
             <div className={"description"}>
                 <div className={"price"}>
-                    <span>{formatCurrency(item.price.amount)}</span>
+                    <span>{formatCurrency(item.price.amount).split(',')[0]}</span>
                     {item.free_shipping && (
                         <span>
                             <img src={car} alt={"Envio gratis"}/>
