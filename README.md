@@ -25,3 +25,13 @@ cd server
 npm install
 npm start
 ```
+
+
+## Caja de busqueda
+![img.png](doc/searchbar.png)
+
+## Resultados de búsqueda
+![img.png](doc/results.png)
+
+## Detalle de Producto
+![img.png](doc/detail.png)
