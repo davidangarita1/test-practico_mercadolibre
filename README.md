@@ -14,3 +14,14 @@ cd client
 npm install
 npm start
 ```
+
+## Servidor
+* Node
+* Express
+
+Comandos:
+```shell
+cd server
+npm install
+npm start
+```
