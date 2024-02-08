@@ -19,6 +19,14 @@
     "description .";
     border-radius: 5px;
     background-color: map-get($themes, 'white');
+    @media (max-width: 700px) {
+      grid-template-columns: 100% auto;
+      justify-content: center;
+      grid-template-areas:
+      "picture"
+      "details"
+      "description";
+    }
 
     .picture {
       display: grid;
@@ -26,6 +34,9 @@
       margin: 0;
       padding: 30px;
       place-content: center;
+      img {
+        width: 100%;
+      }
     }
 
     .details {

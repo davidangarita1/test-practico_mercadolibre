@@ -14,6 +14,7 @@ const itemMapper = (item) => {
         shipping,
         category_id,
         sold_quantity,
+        pictures,
     } = item;
     return {
         id,
@@ -23,7 +24,7 @@ const itemMapper = (item) => {
             amount: price,
             decimals: price.toFixed(2)
         },
-        picture: thumbnail,
+        picture: pictures ? pictures[0].url : thumbnail,
         condition,
         free_shipping: shipping.free_shipping,
         sold_quantity,

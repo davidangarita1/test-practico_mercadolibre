@@ -1,4 +1,5 @@
 import {
+    CLEAN_ITEM_DETAIL,
     LOAD_FAILURE_ITEM_DETAIL,
     LOAD_SUCCESS_ITEM_DETAIL,
     LOADING_ITEM_DETAIL
@@ -31,6 +32,13 @@ export const itemDetailReducer = (state = initialState, {type, payload}: Action)
                 ...state,
                 isLoading: false,
                 error: payload
+            }
+        }
+        case CLEAN_ITEM_DETAIL: {
+            return {
+                ...state,
+                itemDetail: null,
+                isLoading: true,
             }
         }
         default:
