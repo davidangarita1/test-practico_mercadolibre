@@ -22,7 +22,7 @@ export const ItemDetail = (): ReactElement => {
 
                     <div className={"details"}>
                         <div className={"condition"}>
-                            {`${itemDetail.item.condition} - ${itemDetail.item.sold_quantity} vendidos`}
+                            {`${itemDetail.item.condition === 'new' ? "Nuevo" : "Usado"} - ${itemDetail.item.sold_quantity ?? ''} vendidos`}
                         </div>
                         <div className={"title"}>{itemDetail.item.title}</div>
                         <Currency value={itemDetail.item.price.amount}/>

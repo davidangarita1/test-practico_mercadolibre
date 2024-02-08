@@ -9,11 +9,11 @@ const useItemList = () => {
     const {searchText} = useSelector((state: { search: { searchText: string } }) => state.search);
     const {itemList, isLoading, error} = useSelector((state: { itemList: any }) => state.itemList);
 
-    const lastSearch: string | null = sessionStorage.getItem('lastSearch');
+    const currentSearch : string = window.location.search.replace('?search=', '')
 
     useEffect(() => {
         // dispatch(setItemList(itemListMock));
-        getItemList(lastSearch ?? searchText);
+        getItemList(currentSearch ?? searchText);
     }, [searchText])
 
     const getItemList = (text: string): void => {
@@ -27,7 +27,7 @@ const useItemList = () => {
         itemList,
         isLoading,
         error,
-        lastSearch
+        currentSearch
     }
 };
 

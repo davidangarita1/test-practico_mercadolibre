@@ -6,11 +6,11 @@ import useItemList from "../hook/useItemList";
 import {CategoryList, ItemCard, SEO} from "../../../components";
 
 export const ItemList = (): ReactElement => {
-    const {itemList, isLoading, error, lastSearch} = useItemList();
+    const {itemList, isLoading, error, currentSearch} = useItemList();
 
     return (
         <>
-            <SEO title={`${lastSearch} | Mercado Libre`} description={`Busquedas relacionadas con ${lastSearch}`}/>
+            <SEO title={`${currentSearch} | Mercado Libre`} description={`Busquedas relacionadas con ${currentSearch}`}/>
             <div className={'ItemList'}>
                 <CategoryList categories={itemList.categories}/>
                 <div className={"items"}>
